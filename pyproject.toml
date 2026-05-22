@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typer-smol-agents-demo"
+version = "0.1.0"
+description = "Esempio: Typer CLI + confronto basico tra SmolAgents e TinyAgent"
+authors = [
+    {name = "Autore", email = "autore@example.com"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.9",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+smolagents = ["smolagents>=0.1"]
+tinyagent = ["tinyagent>=0.1"]
+test = ["pytest>=7.0", "pytest-cov>=4.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["src/*", "src/**/*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
