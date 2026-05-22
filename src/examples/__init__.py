@@ -1,0 +1,1 @@
+"""Modulo examples: esempi di utilizzo del package."""
